@@ -30,12 +30,17 @@ Cambiar de horizontal a vertical los elementos utilizamos flex **/
   --textFooter-weight: normal;
   --textFooter-color: var(--gris);
 }
+
 button {
   all: unset;
   cursor: pointer;
 }
+
 body {
   font-family: var(--fuentePrincipal);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 nav {
@@ -43,35 +48,65 @@ nav {
   justify-content: space-between;
   padding: 10px 30px;
   align-items: center;
+  height: 60px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.links {
+.links_contain {
   display: flex;
-  list-style: none;
   gap: 15px;
   align-items: center;
 }
 
-a {
-  text-decoration: none;
-  color: var(--gris);
-  font-size: 12px;
-}
-
-.links img {
+.links_contain img {
   width: 40px;
   height: 40px;
   display: block;
+}
+
+.links {
+  display: none;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--azul);
+  font-weight: bold;
+}
+
+.links a[aria-current="page"],
+.links a[aria-current="page"]:hover {
+  color: var(--azul);
+  font-weight: bold;
+  cursor: default;
 }
 
 .icons {
   display: flex;
   gap: 20px;
   list-style: none;
+  height: 20px;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.2);
 }
 
 main {
+  flex: 1;
   padding: 40px;
 }
 
@@ -148,8 +183,20 @@ footer {
   width: 24px;
 }
 
-/* Tablet */
-@media (min-width: 768px) {
+/* === TABLET === */
+@media only screen and (min-width: 768px) {
+  /* Cambios para pantallas >= 768px */
+  .links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .menu {
+    display: none;
+  }
+
   footer {
     flex-direction: row;
     justify-content: space-between;
@@ -168,8 +215,9 @@ footer {
   }
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
+/* === DESKTOP === */
+@media only screen and (min-width: 1024px) {
+  /* Cambios para pantallas >= 1024px */
   footer {
     padding: 20px 50px;
     gap: 0;
