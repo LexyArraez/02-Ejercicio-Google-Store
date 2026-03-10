@@ -83,6 +83,10 @@ main {
   gap: 8px;
 }
 
+section {
+  display: flex;
+}
+
 .photos {
   display: flex;
 }
