@@ -143,42 +143,56 @@ section {
 
 footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   padding: 15px 20px;
-  background-color: var(--grisClaro);
   color: var(--textFooter-color);
+  background-color: var(--grisClaro);
 }
 
+footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Iconos sociales */
 .social-icons {
   display: flex;
   gap: 17px;
-  order: 1;
-  margin: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icons img {
   height: 22px;
+  display: block;
+}
+
+/* Enlaces y país */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--textFooter-color);
+  font-size: var(--textFooter-size);
+}
+
+.country_mobile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--textFooter-size);
 }
 
 .country {
   display: flex;
   align-items: center;
   gap: 5px;
-  order: 3;
-  font-size: var(--textFooter-size);
-  padding: 5px;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  order: 2;
-}
-
-.footer-links a {
   font-size: var(--textFooter-size);
 }
 
@@ -200,65 +214,32 @@ footer {
     display: none;
   }
 
-  footer {
+  footer > div {
     flex-direction: row;
     align-items: center;
-    text-align: left;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .footer-links {
     flex-direction: row;
-    gap: 40px;
-    margin: 40px;
+    gap: 17px;
+    align-items: center;
+  }
+
+  .country {
+    order: -1;
   }
 
   .social-icons img {
     height: 12px;
-  }
-
-  .country {
-    order: 2;
-  }
-}
-
-/* Destop */
-@media (min-width: 1024px) {
-  footer {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 15px 20px;
-    gap: 5px;
-    background-color: var(--grisClaro);
-  }
-
-  .social-icons {
-    order: 1;
-    height: 12px;
-    align-items: center;
-  }
-
-  .footer-links a {
-    margin: 0;
   }
 }
 
 /* === DESKTOP === */
 @media only screen and (min-width: 1024px) {
   /* Cambios para pantallas >= 1024px */
-  footer {
-    padding: 20px 50px;
-    gap: 0;
-  }
-
-  .footer-links a,
-  /* margin-left: auto empuja el País y los Links a la derecha  */
-  .country {
-    order: 2;
-    margin-left: auto;
-  }
-
-  .footer-links {
-    order: 3;
-    flex-direction: row;
+  footer > div {
+    max-width: 1200px;
   }
 }
