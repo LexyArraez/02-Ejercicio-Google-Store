@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Store</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="./img/google-logo.png" />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- Google Fonts: preconnect improves load performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,9 +21,17 @@
   </head>
 
   <body>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <!-- Contains the logo, main nav links, and icon actions -->
     <nav>
+
+      <!-- Logo + nav links grouped on the left -->
       <div class="links_contain">
         <img src="img/google-logo.png" alt="logo" />
+
+        <!-- Main nav links — hidden on mobile, visible on tablet+ (see CSS media query) -->
+        <!-- aria-current="page" marks the active page for accessibility and active link styling -->
         <ul class="links">
           <li><a href="#">Phones</a></li>
           <li><a href="#" aria-current="page">Earbuds</a></li>
@@ -27,44 +41,68 @@
           <li><a href="#">Subscriptions</a></li>
         </ul>
       </div>
+
+      <!-- Action icons on the right: search, help, cart, user account, and hamburger menu -->
+      <!-- The hamburger (.menu) is visible on mobile and hidden on tablet+ -->
       <ul class="icons">
         <li>
-          <a href="#"><img src="img/icons/Search.svg" alt="buscador" /></a>
+          <a href="#"><img src="img/icons/Search.svg" alt="Search" /></a>
         </li>
         <li>
-          <a href="#"><img src="img/icons/Help.svg" alt="ayuda" /></a>
+          <a href="#"><img src="img/icons/Help.svg" alt="Help" /></a>
         </li>
         <li>
-          <a href="#"> <img src="img/icons/Cart.svg" alt="carrito" /></a>
+          <a href="#"><img src="img/icons/Cart.svg" alt="Cart" /></a>
         </li>
         <li>
-          <a href="#"><img src="img/icons/Avatar.svg" alt="usuario" /></a>
+          <a href="#"><img src="img/icons/Avatar.svg" alt="User account" /></a>
         </li>
         <li class="menu">
-          <a href="#"><img src="img/icons/icons-menu.svg" alt="usuario" /></a>
+          <a href="#"><img src="img/icons/icons-menu.svg" alt="Open menu" /></a>
         </li>
       </ul>
+
     </nav>
+    <!-- END NAVIGATION -->
+
+
+    <!-- ===================== MAIN CONTENT ===================== -->
     <main>
+
+      <!-- Back button to return to the product listing -->
       <button class="btn_back">
         <img src="../img/icons/Arrow.svg" alt="back" />
         See product details
       </button>
+
+      <!-- Product detail section: gallery on the left, info on the right -->
       <section>
+
+        <!-- Left column: product image gallery -->
         <div>
           <div class="photos">
+
+            <!-- Thumbnail list for selecting a product image -->
             <div class="thumbnails">
               <img src="../img/earbuds/earbuds_01.png" alt="earbuds_01" />
               <img src="../img/earbuds/earbuds_02.png" alt="earbuds_02" />
               <img src="../img/earbuds/earbuds_03.png" alt="earbuds_03" />
               <img src="../img/earbuds/earbuds_04.png" alt="earbuds_04" />
             </div>
+
+            <!-- Main product image (updates when a thumbnail is selected) -->
             <div class="image">
               <img src="../img/earbuds/earbuds_01.png" alt="earbuds_01" />
             </div>
+
           </div>
         </div>
+        <!-- END left column -->
+
+        <!-- Right column: product info, color picker, purchase options -->
         <div class="infor_product">
+
+          <!-- Product title, category and price summary -->
           <div>
             <h1>Google Pixel Bunds Pro</h1>
             <p>Music & Sound</p>
@@ -72,7 +110,11 @@
             <hr />
             <p>Choose a Color</p>
           </div>
+
+          <!-- Color selector and purchase actions -->
           <div>
+
+            <!-- Color swatches — each div represents a color option -->
             <div class="colors">
               <div></div>
               <div></div>
@@ -81,6 +123,8 @@
               <div></div>
               <div></div>
             </div>
+
+            <!-- Quantity selector, add to cart, and delivery info -->
             <div>
               <h1>229 €</h1>
               <hr />
@@ -92,30 +136,39 @@
                 <option value="5">5</option>
               </select>
               <button>Add to cart</button>
+
+              <!-- Estimated delivery information -->
               <div class="delivery">
                 <img src="../img/icons/Delivery.svg" alt="Delivers" />
                 <p>Delivers 29 Apr to <span>08023</span></p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </main>
 
+          </div>
+
+        </div>
+        <!-- END right column -->
+
+      </section>
+
+    </main>
+    <!-- END MAIN CONTENT -->
+
+
+    <!-- ===================== FOOTER ===================== -->
     <footer>
       <div>
+
+        <!-- Social media links -->
         <div class="social-icons">
           <a href="#"><img src="./img/icons/SM-x.svg" alt="X" /></a>
-          <a href="#"
-            ><img src="./img/icons/SM-instagram.svg" alt="Instagram"
-          /></a>
-          <a href="#"
-            ><img src="./img/icons/SM-facebook.svg" alt="Facebook"
-          /></a>
+          <a href="#"><img src="./img/icons/SM-instagram.svg" alt="Instagram" /></a>
+          <a href="#"><img src="./img/icons/SM-facebook.svg" alt="Facebook" /></a>
           <a href="#"><img src="./img/icons/SM-youtube.svg" alt="YouTube" /></a>
           <a href="#"><img src="./img/icons/SM-tiktok.svg" alt="TikTok" /></a>
         </div>
 
+        <!-- Legal links and country selector -->
         <div class="footer-links">
           <a href="#">Privacy</a>
           <a href="#">Google Nest Commitment to Privacy</a>
@@ -125,7 +178,10 @@
             <img src="./img/icons/Spain.svg" alt="Spain" /> Spain
           </div>
         </div>
+
       </div>
     </footer>
+    <!-- END FOOTER -->
+
   </body>
 </html>
