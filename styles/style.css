@@ -131,6 +131,7 @@ main {
   font-weight: var(--text-weight);
   display: flex;
   gap: 8px;
+  text-decoration: none;
 }
 
 /* === PRODUCT GALLERY === */
@@ -140,7 +141,7 @@ section {
   grid-template-columns: 2fr 1fr;
 }
 
-.photos {
+figure {
   display: flex;
   align-items: center;
   gap: 23px;
