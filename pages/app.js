@@ -15,9 +15,9 @@ window.onload = function () {
 
 
     // Intentamos capturar los datos básicos
-    const titulo = document.querySelector('h1')?.innerText 
-    const precio = document.querySelector('.price_purchase')?.innerText ;
-    const cantidad = document.getElementById('quantity')?.value 
+    const titulo = document.querySelector('h1')?.innerText
+    const precio = document.querySelector('.price_purchase')?.innerText;
+    const cantidad = document.getElementById('quantity')?.value
 
     // Buscamos el color seleccionado
     const radioSeleccionado = document.querySelector('input[name="color"]:checked');
