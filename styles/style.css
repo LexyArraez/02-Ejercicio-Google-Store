@@ -162,11 +162,14 @@ section {
 
 figure {
   width: 100%;
+  
 }
 
 .thumbnails {
   display: none;
 }
+
+
 
 .image {
   background-color: var(--gray-light);
@@ -178,6 +181,8 @@ figure {
   align-items: center;
   padding: 30px;
 }
+  
+  
 
 .image img {
   max-width: 100%;
