@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Carrito de Compra</title>
+</head>
+
+<body>
+  <nav aria-label="Main navigation">
+    <div class="links_contain">
+      <a href="./pages/watches.html"><img src="../img/google-logo.png" alt="logo" /></a>
+
+      <ul class="links">
+        <li><a href="#">Phones</a></li>
+        <li>
+          <a href="../index.html" aria-current="page">Earbuds</a>
+        </li>
+        <li><a href="../pages/watches.html">Watches</a></li>
+        <li><a href="#">Smart Home</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Subscriptions</a></li>
+      </ul>
+    </div>
+
+    <ul class="icons">
+      <li>
+        <a href="#"><img src="../img/icons/Search.svg" alt="Search" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="../img/icons/Help.svg" alt="Help" /></a>
+      </li>
+      <li>
+        <a href="../pages/cart.html"><img src="../img/icons/Cart.svg" alt="Cart" /><span id="cart-count">0</span></a>
+      </li>
+      <li>
+        <a href="#"><img src="../img/icons/Avatar.svg" alt="User account" /></a>
+      </li>
+      <li class="menu">
+        <a href="#"><img src="../img/icons/icons-menu.svg" alt="Open menu" /></a>
+      </li>
+    </ul>
+  </nav>
+<main>
+  <section class="cart-wrapper">
+        <h1>Tu carrito</h1>
+        
+        <div id="cart-items-container"></div>
+
+        <div id="cart-footer" class="hidden">
+            <div class="total-section">
+                <span>Total estimado:</span>
+                <span id="cart-total-amount">0 €</span>
+            </div>
+            <button id="checkout-btn" class="buy-button">Finalizar compra</button>
+        </div>
+
+        <div id="empty-cart-msg" class="hidden">
+            <p>Tu carrito está vacío actualmente.</p>
+            <a href="../index.html" class="back-link">Continuar comprando</a>
+        </div>
+    </section>
+</main>
+
+  <script src="../scripts/cart.js"></script>
+</body>
+
+</html>

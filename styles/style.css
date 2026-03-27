@@ -133,6 +133,7 @@ nav {
   filter: invert(29%) sepia(98%) saturate(1352%) hue-rotate(204deg) brightness(98%) contrast(95%);
 }
 
+
 /* === MAIN CONTENT === */
 main {
   flex: 1;
@@ -529,3 +530,8 @@ footer>div {
     max-width: 1200px;
   }
 }
+
+
+
+
+
